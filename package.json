@@ -10,6 +10,9 @@
 		"pnpm": ">=3"
 	},
 	"keywords": [],
-	"author": "acton",
+	"author": {
+		"name": "acton",
+		"email": "acton8.wang@gmail.com"
+	},
 	"license": "ISC"
 }
