@@ -7,12 +7,12 @@ This is a demo app for building monorepo
 ```shell
 # clone
 git clone https://github.com/act0n/mono-app.git
-```
 
-```shell
+
 # install
 pnpm install
 ```
+
 
 
 
