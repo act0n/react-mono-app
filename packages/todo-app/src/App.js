@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { nanoid } from 'nanoid'
 import Todo from './components/Todo'
 import Form from './components/Form'
 import FilterButton from './components/FilterButton'
+import SonRef from './components/SonRef'
+import SonBlock from './components/SonBlock'
 
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks || [])
@@ -41,8 +43,20 @@ function App(props) {
   const tasksNoun = tasks.length > 1 ? 'tasks' : 'task'
   const headingText = `${tasks.length} ${tasksNoun} remaining`
 
+  const sonRef = useRef(null)
+  const showRef = (ref) => {
+    console.log(ref)
+    ref && ref.current.focusHandler()
+  }
   return (
     <div className="todo-app stack-large">
+      <div>
+        <div>
+          <SonRef ref={sonRef} />
+          <button onClick={() => showRef(sonRef)}>showRef</button>
+        </div>
+        <SonBlock />
+      </div>
       <h1>TodoMatic</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
