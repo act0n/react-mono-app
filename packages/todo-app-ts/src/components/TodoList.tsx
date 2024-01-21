@@ -1,5 +1,5 @@
 import TodoItem from './TodoItem'
-import { Todo } from '../types/types.todo'
+import { Todo } from '../types/todo.type'
 
 interface TodoListProps {
   todoList: Todo[]

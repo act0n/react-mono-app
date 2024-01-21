@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { AddTodo, TodoList } from './components'
-import { Todo } from './types/types.todo'
+import { Todo } from './types/todo.type'
+import { useInit } from './custom.hook'
 
 function App() {
+  const [list] = useInit()
+  console.log(list)
+
   const [todoList, setTodoList] = useState<Todo[]>([])
   const deleteTodoItem = (id: number) => {
     setTodoList(todoList.filter((item) => item.id !== id))

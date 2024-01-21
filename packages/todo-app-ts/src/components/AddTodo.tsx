@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Todo } from '../types/types.todo'
+import { Todo } from '../types/todo.type'
 
 interface AddTodoProps {
   todoList: Todo[]
